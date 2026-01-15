@@ -1,0 +1,159 @@
+{
+    "key": "group_theme_options",
+    "title": "Theme Options",
+    "fields": [
+        {
+            "key": "field_tab_header",
+            "label": "Header Settings",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_header_top_bar_group",
+            "label": "Top Bar Info",
+            "name": "header_top_bar",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_header_phone",
+                    "label": "Phone Text",
+                    "name": "phone_text",
+                    "type": "text",
+                    "default_value": "Call: +44 (0)1792 584 584"
+                },
+                {
+                    "key": "field_header_top_bar_links",
+                    "label": "Links",
+                    "name": "top_bar_links",
+                    "type": "repeater",
+                    "layout": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_header_link_item",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "return_format": "array"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_header_logos_group",
+            "label": "Logos (Desktop)",
+            "name": "header_logos",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_header_logo_main",
+                    "label": "Main Logo",
+                    "name": "main_logo",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_header_logo_scrolled",
+                    "label": "Scrolled Logo",
+                    "name": "scrolled_logo",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "thumbnail"
+                }
+            ]
+        },
+        {
+            "key": "field_header_mobile_group",
+            "label": "Mobile Navigation Settings",
+            "name": "header_mobile_nav",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mobile_logo",
+                    "label": "Mobile Logo",
+                    "name": "mobile_logo",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_mobile_open_icon",
+                    "label": "Open Menu Icon",
+                    "name": "mobile_open_icon",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "thumbnail"
+                }
+            ]
+        },
+        {
+            "key": "field_tab_footer",
+            "label": "Footer Settings",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_footer_socials",
+            "label": "Social Media Icons",
+            "name": "footer_socials",
+            "type": "repeater",
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_social_icon_img",
+                    "label": "Icon Image",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_social_link",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url"
+                },
+                 {
+                    "key": "field_social_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "default_value": "Facebook"
+                }
+            ]
+        },
+        {
+            "key": "field_footer_copyright",
+            "label": "Copyright Text",
+            "name": "footer_copyright",
+            "type": "text",
+            "default_value": "©2026 Coach House Pianos"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+}

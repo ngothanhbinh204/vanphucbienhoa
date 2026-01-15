@@ -45,73 +45,55 @@
 	</div>
 
 	<div class="is-width-desktop has-text-centered flex-center margin-top-double margin-bottom-double">
-		<div class="is-flex-tablet margin-bottom-double">
-			<a href="https://www.coachhousepianos.co.uk/piano-types/" class="button is-text has-text-white" title="Piano">Piano</a>
-			<a href="https://www.coachhousepianos.co.uk/our-services/" class="button is-text has-text-white" title="Services">Services</a>
-			<a href="https://www.coachhousepianos.co.uk/our-services/education/" class="button is-text has-text-white" title="Education">Education</a>
-			<a href="https://www.coachhousepianos.co.uk/interiors/" class="button is-text has-text-white" title="Interiors">Interiors</a>
+		<div class="is-flex-tablet margin-bottom-double menu-footer-top">
+			<?php
+			$top_items = CHP_Menu_Walker::get_tree('menu-footer-top');
+			if ($top_items) {
+				foreach ($top_items as $item) {
+					echo '<a href="' . esc_url($item->url) . '" class="button is-text has-text-white" title="' . esc_attr($item->title) . '">' . esc_html($item->title) . '</a>';
+				}
+			}
+			?>
 		</div>
 
-		<div class="columns is-multiline is-mobile nav-bordered is-centered w-100">
-			<div class="column is-6-mobile is-3-tablet is-2-desktop">
-				<a href="https://www.coachhousepianos.co.uk/about-us/" class="title-key flex-center" title="About">About</a>
-			</div>
-			<div class="column is-6-mobile is-3-tablet is-2-desktop">
-				<a href="https://www.coachhousepianos.co.uk/terms-conditions/" class="title-key flex-center" title="T&amp;Cs">T&amp;Cs</a>
-			</div>
-			<div class="column is-6-mobile is-3-tablet is-2-desktop">
-				<a href="https://www.coachhousepianos.co.uk/delivery/" class="title-key flex-center" title="Delivery">Delivery</a>
-			</div>
-			<div class="column is-6-mobile is-3-tablet is-2-desktop">
-				<a href="https://www.coachhousepianos.co.uk/privacy-policy/" class="title-key flex-center" title="Privacy">Privacy</a>
-			</div>
-			<div class="column is-6-mobile is-3-tablet is-2-desktop">
-				<a href="https://www.coachhousepianos.co.uk/my-account/" class="title-key flex-center" title="My account">My account</a>
-			</div>
-			<div class="column is-6-mobile is-3-tablet is-2-desktop">
-				<a href="https://www.coachhousepianos.co.uk/contact-us/" class="title-key flex-center" title="Contact">Contact</a>
-			</div>
+		<div class="columns is-multiline is-mobile nav-bordered is-centered w-100 menu-footer-bottom">
+			<?php
+			$bottom_items = CHP_Menu_Walker::get_tree('menu-footer-bottom');
+			if ($bottom_items) {
+				foreach ($bottom_items as $item) {
+					echo '<div class="column is-6-mobile is-3-tablet is-2-desktop">';
+					echo '<a href="' . esc_url($item->url) . '" class="title-key flex-center" title="' . esc_attr($item->title) . '">' . esc_html($item->title) . '</a>';
+					echo '</div>';
+				}
+			}
+			?>
 		</div>
 
 		<div class="is-multiline is-mobile is-centered w-100 tw-mt-10">
 			<div class="padding-top-double">
-				<a href="https://www.facebook.com/coachhousepianos/" title="Facebook" target="_blank" class="icon tw-m-4 md:tw-m-8">
-					<picture>
-						<img class="tw-inline-block" src="https://www.coachhousepianos.co.uk/wp-content/uploads/2025/03/icon-facebook.svg" width="40" height="40" alt="icon-facebook">
-					</picture>
-				</a>
-				<a href="https://www.instagram.com/coachhousepianos/" title="Instagram" target="_blank" class="icon tw-m-4 md:tw-m-8">
-					<picture>
-						<img class="tw-inline-block" src="https://www.coachhousepianos.co.uk/wp-content/uploads/2020/11/icon-instagram.svg" width="40" height="40" alt="icon-instagram">
-					</picture>
-				</a>
-				<a href="https://www.linkedin.com/company/coach-house-pianos/" title="LinkedIn" target="_blank" class="icon tw-m-4 md:tw-m-8">
-					<picture>
-						<img class="tw-inline-block" src="https://www.coachhousepianos.co.uk/wp-content/uploads/2025/03/icon-linkedin.svg" width="40" height="40" alt="icon-linkedin">
-					</picture>
-				</a>
-				<a href="https://x.com/coachhouseuk" title="Twitter" target="_blank" class="icon tw-m-4 md:tw-m-8">
-					<picture>
-						<img class="tw-inline-block" src="https://www.coachhousepianos.co.uk/wp-content/uploads/2023/11/icon-x.svg" width="40" height="40" alt="">
-					</picture>
-				</a>
-				<a href="https://www.youtube.com/@coach-house-pianos" title="YouTube" target="_blank" class="icon tw-m-4 md:tw-m-8">
-					<picture>
-						<img class="tw-inline-block" src="https://www.coachhousepianos.co.uk/wp-content/uploads/2025/03/icon-youtube.svg" width="40" height="40" alt="icon-youtube">
-					</picture>
-				</a>
-				<a href="https://www.tiktok.com/@coachhousepianos" title="TikTok" target="_blank" class="icon tw-m-4 md:tw-m-8">
-					<picture>
-						<img class="tw-inline-block" src="https://www.coachhousepianos.co.uk/wp-content/uploads/2025/03/icon-tiktok.svg" width="40" height="40" alt="icon-tiktok">
-					</picture>
-				</a>
+				<?php
+				if (have_rows('footer_socials', 'option')):
+					while (have_rows('footer_socials', 'option')) : the_row();
+						$icon  = get_sub_field('icon');
+						$link  = get_sub_field('link');
+						$title = get_sub_field('title');
+				?>
+						<a href="<?php echo esc_url($link); ?>" title="<?php echo esc_attr($title); ?>" target="_blank" class="icon tw-m-4 md:tw-m-8">
+							<picture>
+								<img class="tw-inline-block" src="<?php echo esc_url($icon); ?>" width="40" height="40" alt="<?php echo esc_attr($title); ?>">
+							</picture>
+						</a>
+				<?php
+					endwhile;
+				endif;
+				?>
 			</div>
 		</div>
 	</div>
 
 
 	<div class="is-width-desktop has-text-centered flex-center">
-		<div class="is-family-sans-serif is-size-7 is-uppercase has-text-weight-light margin-top-double has-text-grey padding-top-double">©2026 Coach House Pianos</div>
+		<div class="is-family-sans-serif is-size-7 is-uppercase has-text-weight-light margin-top-double has-text-grey padding-top-double"><?php echo esc_html(get_field('footer_copyright', 'option') ?: '©2026 Coach House Pianos'); ?></div>
 	</div>
 
 </footer>

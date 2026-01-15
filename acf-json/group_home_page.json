@@ -1,0 +1,366 @@
+{
+    "key": "group_home_page",
+    "title": "Home Page Settings",
+    "fields": [
+        {
+            "key": "field_tab_hero",
+            "label": "Hero Slider",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_hero",
+            "label": "Show Hero Section",
+            "name": "show_hero",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_hero_slides",
+            "label": "Hero Slides",
+            "name": "hero_slides",
+            "type": "repeater",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_show_hero",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "sub_fields": [
+                {
+                    "key": "field_hero_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "url"
+                },
+                {
+                    "key": "field_hero_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_hero_subtitle",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_hero_link",
+                    "label": "Button Link",
+                    "name": "link",
+                    "type": "link",
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_tab_intro",
+            "label": "Introduction",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_intro",
+            "label": "Show Introduction",
+            "name": "show_intro",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_intro_group",
+            "label": "Content",
+            "name": "intro_content",
+            "type": "group",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_show_intro",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "sub_fields": [
+                 { "key": "intro_h1", "label": "Heading 1", "name": "heading_1", "type": "text" },
+                 { "key": "intro_h2", "label": "Heading 2", "name": "heading_2", "type": "text" },
+                 { "key": "intro_text", "label": "Text", "name": "text", "type": "wysiwyg" }
+            ]
+        },
+        {
+            "key": "field_tab_cats",
+            "label": "Category Slider",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_cats",
+            "label": "Show Category Slider",
+            "name": "show_cats",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_cat_slides",
+            "label": "Slides",
+            "name": "cat_slides",
+            "type": "repeater",
+            "conditional_logic": [ [ { "field": "field_show_cats", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "cat_title", "label": "Title", "name": "title", "type": "text" },
+                { "key": "cat_btn_label", "label": "Button Label", "name": "button_label", "type": "text", "default_value": "Shop Now" },
+                { "key": "cat_link", "label": "Link URL", "name": "link_url", "type": "text" },
+                { "key": "cat_image", "label": "Image", "name": "image", "type": "image", "return_format": "url" }
+            ]
+        },
+        {
+            "key": "field_tab_shop",
+            "label": "Shop Links",
+            "type": "tab"
+        },
+         {
+            "key": "field_show_shop",
+            "label": "Show Shop Links",
+            "name": "show_shop",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_shop_items",
+            "label": "Shop Items (Left & Right)",
+            "name": "shop_items",
+            "type": "repeater",
+            "max": 2,
+            "button_label": "Add Item",
+            "conditional_logic": [ [ { "field": "field_show_shop", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "shop_title", "label": "Title", "name": "title", "type": "text" },
+                 { "key": "shop_sub", "label": "Subtitle/Button", "name": "subtitle", "type": "text", "default_value": "Shop" },
+                { "key": "shop_link", "label": "Link", "name": "link", "type": "url" }
+            ]
+        },
+        {
+            "key": "field_tab_finder",
+            "label": "Piano Finder",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_finder",
+            "label": "Show Piano Finder",
+            "name": "show_finder",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_finder_content",
+            "label": "Content",
+            "name": "finder_content",
+            "type": "group",
+            "conditional_logic": [ [ { "field": "field_show_finder", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "finder_title", "label": "Title", "name": "title", "type": "text" },
+                { "key": "finder_text", "label": "Text", "name": "text", "type": "textarea" },
+                { "key": "finder_link", "label": "Link", "name": "link", "type": "link", "return_format": "array" }
+            ]
+        },
+        {
+            "key": "field_tab_featured",
+            "label": "Featured Products",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_featured",
+            "label": "Show Featured",
+            "name": "show_featured",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+         {
+            "key": "field_featured_title",
+            "label": "Section Title",
+            "name": "featured_title",
+            "type": "text",
+            "default_value": "Featured",
+            "conditional_logic": [ [ { "field": "field_show_featured", "operator": "==", "value": "1" } ] ]
+        },
+        {
+            "key": "field_tab_why",
+            "label": "Why Us",
+            "type": "tab"
+        },
+         {
+            "key": "field_show_why",
+            "label": "Show Why Us",
+            "name": "show_why",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_why_content",
+            "label": "Content",
+            "name": "why_content",
+            "type": "group",
+            "conditional_logic": [ [ { "field": "field_show_why", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                 { "key": "why_title", "label": "Title", "name": "title", "type": "text" },
+                 { "key": "why_intro", "label": "Intro Text", "name": "intro", "type": "textarea" },
+                 { "key": "why_col1", "label": "Column 1", "name": "col_1", "type": "wysiwyg" },
+                 { "key": "why_col2", "label": "Column 2", "name": "col_2", "type": "wysiwyg" },
+                 { "key": "why_link", "label": "Link", "name": "link", "type": "link", "return_format": "array" }
+            ]
+        },
+        {
+            "key": "field_tab_testimonials",
+            "label": "Testimonials",
+            "type": "tab"
+        },
+         {
+            "key": "field_show_testi",
+            "label": "Show Testimonials",
+            "name": "show_testi",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_testi_slides",
+            "label": "Testimonials",
+            "name": "testi_slides",
+            "type": "repeater",
+             "conditional_logic": [ [ { "field": "field_show_testi", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "testi_image", "label": "Image", "name": "image", "type": "image", "return_format": "url" },
+                { "key": "testi_video", "label": "Video Link", "name": "video_link", "type": "url" },
+                { "key": "testi_quote", "label": "Quote", "name": "quote", "type": "textarea" },
+                { "key": "testi_btn", "label": "Button Label", "name": "button_label", "type": "text", "default_value": "Watch" }
+            ]
+        },
+        {
+            "key": "field_tab_guarantee",
+            "label": "Guarantee",
+            "type": "tab"
+        },
+         {
+            "key": "field_show_guarantee",
+            "label": "Show Guarantee",
+            "name": "show_guarantee",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+             "key": "field_guarantee_content",
+            "label": "Content",
+            "name": "guarantee_content",
+            "type": "group",
+            "conditional_logic": [ [ { "field": "field_show_guarantee", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                 { "key": "guan_title", "label": "Title", "name": "title", "type": "textarea", "rows": 3 },
+                 { "key": "guan_col1", "label": "Left Text (Empty for spacing usually)", "name": "col_1", "type": "textarea" },
+                 { "key": "guan_col2", "label": "Right Content", "name": "col_2", "type": "wysiwyg" }
+            ]
+        },
+        {
+            "key": "field_tab_webuy",
+            "label": "We Buy Pianos",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_webuy",
+            "label": "Show We Buy",
+            "name": "show_webuy",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_webuy_content",
+            "label": "Content",
+            "name": "webuy_content",
+            "type": "group",
+             "conditional_logic": [ [ { "field": "field_show_webuy", "operator": "==", "value": "1" } ] ],
+             "sub_fields": [
+                  { "key": "webuy_title", "label": "Title", "name": "title", "type": "text" },
+                  { "key": "webuy_text", "label": "Text", "name": "text", "type": "textarea" },
+                  { "key": "webuy_link", "label": "Link", "name": "link", "type": "link", "return_format": "array" }
+             ]
+        },
+        {
+             "key": "field_tab_craft",
+            "label": "Our Craft",
+            "type": "tab"
+        },
+        {
+             "key": "field_show_craft",
+            "label": "Show Craft",
+            "name": "show_craft",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+         {
+            "key": "field_craft_content",
+            "label": "Content",
+            "name": "craft_content",
+            "type": "group",
+             "conditional_logic": [ [ { "field": "field_show_craft", "operator": "==", "value": "1" } ] ],
+             "sub_fields": [
+                  { "key": "craft_bg", "label": "Background Image", "name": "bg_image", "type": "image", "return_format": "url" },
+                  { "key": "craft_sub", "label": "Subtitle", "name": "subtitle", "type": "text", "default_value": "OUR UNIQUE CRAFT" },
+                  { "key": "craft_text", "label": "Main Text", "name": "text", "type": "textarea" },
+                  { "key": "craft_link", "label": "Link", "name": "link", "type": "link", "return_format": "array" }
+             ]
+        },
+        {
+             "key": "field_tab_brands",
+            "label": "Brands",
+            "type": "tab"
+        },
+        {
+             "key": "field_show_brands",
+            "label": "Show Brands",
+            "name": "show_brands",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+             "key": "field_brands",
+            "label": "Brands Slider",
+            "name": "brands_slider",
+            "type": "repeater",
+            "conditional_logic": [ [ { "field": "field_show_brands", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                 { "key": "brand_logo", "label": "Logo", "name": "logo", "type": "image", "return_format": "url" },
+                 { "key": "brand_link", "label": "Link", "name": "link", "type": "url" }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/template_home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true
+}

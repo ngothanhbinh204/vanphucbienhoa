@@ -1,0 +1,106 @@
+{
+    "key": "group_menu_extras",
+    "title": "Menu Item Extras (Promo)",
+    "fields": [
+        {
+            "key": "field_menu_promo_image",
+            "label": "Hình ảnh menu",
+            "name": "menu_promo_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Hình ảnh hiển thị trong khu vực menu phải.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_menu_promo_link",
+            "label": "Liên kết menu",
+            "name": "menu_promo_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Liên kết",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://..."
+        },
+        {
+            "key": "field_menu_promo_text",
+            "label": "Tiêu đề menu",
+            "name": "menu_promo_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Tiêu đề hiển thị trên hình ảnh menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_menu_promo_button_text",
+            "label": "Nút menu",
+            "name": "menu_promo_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Nút hiển thị trên hình ảnh menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "SHOP NOW",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+}
