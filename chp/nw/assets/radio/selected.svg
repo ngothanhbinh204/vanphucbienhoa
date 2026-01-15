@@ -1,0 +1,9 @@
+<svg id="Component_-_Radio_Button" data-name="Component - Radio Button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g id="Group_78" data-name="Group 78" transform="translate(-30)">
+        <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(30)" fill="none" stroke="#A58255" stroke-width="1">
+            <circle cx="12" cy="12" r="12" stroke="none"/>
+            <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <circle id="Ellipse_3" data-name="Ellipse 3" cx="8" cy="8" r="8" transform="translate(34 4)" fill="#A58255"/>
+    </g>
+</svg>
