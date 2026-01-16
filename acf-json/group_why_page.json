@@ -1,0 +1,399 @@
+{
+    "key": "group_why_page",
+    "title": "Cài đặt trang Tại sao chọn chúng tôi",
+    "fields": [
+        {
+            "key": "field_why_tab_hero",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_hero",
+            "label": "Hiển thị Hero",
+            "name": "show_hero",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_hero_grp",
+            "label": "Nội dung Hero",
+            "name": "hero_content",
+            "type": "group",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_why_show_hero",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "sub_fields": [
+                {
+                    "key": "field_why_hero_img",
+                    "label": "Ảnh nền",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "url"
+                },
+                {
+                    "key": "field_why_hero_title",
+                    "label": "Tiêu đề",
+                    "name": "title",
+                    "type": "text",
+                    "default_value": "Generations of excellence"
+                }
+            ]
+        },
+        {
+            "key": "field_why_tab_intro",
+            "label": "Giới thiệu",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_intro",
+            "label": "Hiển thị Giới thiệu",
+            "name": "show_intro",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_intro_title",
+            "label": "Tiêu đề Giới thiệu",
+            "name": "intro_title",
+            "type": "text",
+            "default_value": "Why choose coach house?"
+        },
+        {
+            "key": "field_why_intro_text",
+            "label": "Nội dung Giới thiệu",
+            "name": "intro_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0
+        },
+        {
+            "key": "field_why_tab_passion",
+            "label": "Đam mê",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_passion",
+            "label": "Hiển thị Đam mê",
+            "name": "show_passion",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_passion_title",
+            "label": "Tiêu đề Đam mê",
+            "name": "passion_title",
+            "type": "text",
+            "default_value": "Your piano, our passion"
+        },
+        {
+            "key": "field_why_passion_text",
+            "label": "Văn bản Đam mê",
+            "name": "passion_text",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_why_passion_gallery",
+            "label": "Gallery Đam mê",
+            "name": "passion_gallery",
+            "type": "gallery",
+            "return_format": "url",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all"
+        },
+        {
+            "key": "field_why_tab_craft",
+            "label": "Thủ công",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_craft",
+            "label": "Hiển thị Thủ công",
+            "name": "show_craft",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_craft_title",
+            "label": "Tiêu đề Thủ công",
+            "name": "craft_title",
+            "type": "text",
+            "default_value": "A time-honoured craft"
+        },
+        {
+            "key": "field_why_craft_text",
+            "label": "Văn bản Thủ công",
+            "name": "craft_text",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_why_craft_img_full",
+            "label": "Ảnh lớn Thủ công",
+            "name": "craft_image_full",
+            "type": "image",
+            "return_format": "url"
+        },
+        {
+            "key": "field_why_tab_journey",
+            "label": "Hành trình mới",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_journey",
+            "label": "Hiển thị Hành trình",
+            "name": "show_journey",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_journey_heading",
+            "label": "Tiêu đề chính",
+            "name": "journey_heading",
+            "type": "text",
+            "default_value": "A new journey begins"
+        },
+        {
+            "key": "field_why_journey_grp_1",
+            "label": "Khối nội dung 1",
+            "name": "journey_1",
+            "type": "group",
+            "sub_fields": [
+                {
+                    "key": "field_why_journey_1_img",
+                    "label": "Ảnh (Trái)",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "url"
+                },
+                {
+                    "key": "field_why_journey_1_text",
+                    "label": "Nội dung (Phải)",
+                    "name": "text",
+                    "type": "wysiwyg"
+                }
+            ]
+        },
+        {
+            "key": "field_why_journey_grp_2",
+            "label": "Khối nội dung 2",
+            "name": "journey_2",
+            "type": "group",
+            "sub_fields": [
+                {
+                    "key": "field_why_journey_2_title",
+                    "label": "Tiêu đề nhỏ",
+                    "name": "title",
+                    "type": "text",
+                    "default_value": "OUR CRAFTSMEN"
+                },
+                {
+                    "key": "field_why_journey_2_text",
+                    "label": "Nội dung (Trái)",
+                    "name": "text",
+                    "type": "wysiwyg"
+                },
+                {
+                    "key": "field_why_journey_2_img",
+                    "label": "Ảnh (Phải)",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_why_tab_customers",
+            "label": "Khách hàng",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_customers",
+            "label": "Hiển thị Khách hàng",
+            "name": "show_customers",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_cust_text",
+            "label": "Lời dẫn Khách hàng",
+            "name": "customers_text",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_why_cust_slider",
+            "label": "Slider Khách hàng",
+            "name": "customers_slider",
+            "type": "gallery",
+            "return_format": "url",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all"
+        },
+        {
+            "key": "field_why_tab_promises",
+            "label": "Cam kết",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_promises",
+            "label": "Hiển thị Cam kết",
+            "name": "show_promises",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_promises_list",
+            "label": "Danh sách Cam kết",
+            "name": "promises_list",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_why_prom_icon",
+                    "label": "Icon/Ảnh",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "url"
+                },
+                {
+                    "key": "field_why_prom_title",
+                    "label": "Tiêu đề",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_why_prom_desc",
+                    "label": "Mô tả",
+                    "name": "description",
+                    "type": "wysiwyg"
+                }
+            ]
+        },
+        {
+            "key": "field_why_tab_restored",
+            "label": "Phục chế",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_restored",
+            "label": "Hiển thị Phục chế",
+            "name": "show_restored",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_res_bg",
+            "label": "Ảnh nền Phục chế",
+            "name": "restored_bg",
+            "type": "image",
+            "return_format": "url"
+        },
+        {
+            "key": "field_why_res_title",
+            "label": "Tiêu đề Phục chế",
+            "name": "restored_title",
+            "type": "text",
+            "default_value": "RESPECTFULLY RESTORED"
+        },
+        {
+            "key": "field_why_res_text",
+            "label": "Nội dung Phục chế",
+            "name": "restored_text",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_why_tab_brands",
+            "label": "Thương hiệu",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_why_show_brands",
+            "label": "Hiển thị Thương hiệu",
+            "name": "show_brands",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_why_brands_title",
+            "label": "Tiêu đề Thương hiệu",
+            "name": "brands_title",
+            "type": "text",
+            "default_value": "Coach House Brands"
+        },
+        {
+            "key": "field_why_brands_text",
+            "label": "Intro Thương hiệu",
+            "name": "brands_text",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_why_brands_list",
+            "label": "Danh sách Logo",
+            "name": "brands_list",
+            "type": "gallery",
+            "return_format": "url",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/template_why.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Cấu hình nội dung cho trang Tại sao chọn chúng tôi"
+}

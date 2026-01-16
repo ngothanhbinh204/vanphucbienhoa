@@ -1,0 +1,266 @@
+{
+    "key": "group_about_page",
+    "title": "About Page Settings",
+    "fields": [
+        {
+            "key": "field_tab_hero_about",
+            "label": "Hero Section",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_hero_about",
+            "label": "Show Hero",
+            "name": "show_hero",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_hero_about_group",
+            "label": "Hero Content",
+            "name": "hero_content",
+            "type": "group",
+            "conditional_logic": [ [ { "field": "field_show_hero_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "field_hero_about_img", "label": "Background Image", "name": "image", "type": "image", "return_format": "url" },
+                { "key": "field_hero_about_title", "label": "Title", "name": "title", "type": "text" }
+            ]
+        },
+        {
+            "key": "field_tab_intro_about",
+            "label": "Welcome/Intro",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_intro_about",
+             "label": "Show Intro",
+            "name": "show_intro",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+         {
+            "key": "field_intro_about_group",
+            "label": "Intro Content",
+            "name": "intro_content",
+            "type": "group",
+            "conditional_logic": [ [ { "field": "field_show_intro_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "field_intro_about_title", "label": "Title", "name": "title", "type": "text" },
+                { "key": "field_intro_about_text", "label": "Main Text", "name": "text", "type": "wysiwyg" },
+                { "key": "field_intro_about_name", "label": "Founder Name", "name": "founder_name", "type": "text" },
+                { "key": "field_intro_about_pos", "label": "Founder Position", "name": "founder_position", "type": "text" }
+            ]
+        },
+        {
+            "key": "field_tab_video_about",
+            "label": "Video",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_video_about",
+            "label": "Show Video",
+            "name": "show_video",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_video_about_url",
+            "label": "Video URL (Vimeo/YouTube)",
+            "name": "video_url",
+            "type": "url",
+             "conditional_logic": [ [ { "field": "field_show_video_about", "operator": "==", "value": "1" } ] ]
+        },
+        {
+            "key": "field_tab_team_about",
+            "label": "Team",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_team_about",
+            "label": "Show Team",
+            "name": "show_team",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_team_about_group",
+            "label": "Team Content",
+            "name": "team_content",
+            "type": "group",
+             "conditional_logic": [ [ { "field": "field_show_team_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "field_team_about_title", "label": "Section Title", "name": "title", "type": "text" },
+                {
+                    "key": "field_team_about_members",
+                    "label": "Team Members",
+                    "name": "members",
+                    "type": "repeater",
+                    "sub_fields": [
+                        { "key": "field_team_mem_img", "label": "Photo", "name": "image", "type": "image", "return_format": "url" },
+                        { "key": "field_team_mem_name", "label": "Name", "name": "name", "type": "text" },
+                        { "key": "field_team_mem_pos", "label": "Position", "name": "position", "type": "text" }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_tab_services_about",
+            "label": "Services/Facilities",
+            "type": "tab"
+        },
+        {
+             "key": "field_show_services_about",
+            "label": "Show Services Slider",
+            "name": "show_services",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_services_about_slides",
+            "label": "Slides",
+            "name": "service_slides",
+            "type": "repeater",
+             "conditional_logic": [ [ { "field": "field_show_services_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                 { "key": "field_serv_img", "label": "Image", "name": "image", "type": "image", "return_format": "url" },
+                 { "key": "field_serv_title", "label": "Title", "name": "title", "type": "text" },
+                 { "key": "field_serv_text", "label": "Text", "name": "text", "type": "textarea" },
+                 { "key": "field_serv_link", "label": "Link", "name": "link", "type": "link", "return_format": "array" }
+            ]
+        },
+        {
+            "key": "field_tab_story_about",
+            "label": "Our Story",
+            "type": "tab"
+        },
+        {
+             "key": "field_show_story_about",
+            "label": "Show Story",
+            "name": "show_story",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+         {
+            "key": "field_story_about_group",
+            "label": "Story Content",
+            "name": "story_content",
+            "type": "group",
+             "conditional_logic": [ [ { "field": "field_show_story_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                { "key": "field_story_title", "label": "Title", "name": "title", "type": "text", "default_value": "OUR STORY" },
+                 { "key": "field_story_intro", "label": "Intro", "name": "intro", "type": "textarea" },
+                 { "key": "field_story_col1", "label": "Column 1", "name": "col_1", "type": "wysiwyg" },
+                 { "key": "field_story_col2", "label": "Column 2", "name": "col_2", "type": "wysiwyg" }
+            ]
+        },
+        {
+            "key": "field_tab_purpose_about",
+            "label": "Purpose & Mission",
+            "type": "tab"
+        },
+        {
+             "key": "field_show_purpose_about",
+            "label": "Show Purpose",
+            "name": "show_purpose",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_purpose_about_group",
+            "label": "Content",
+            "name": "purpose_content",
+            "type": "group",
+            "conditional_logic": [ [ { "field": "field_show_purpose_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                 { "key": "field_purp_title", "label": "Purpose Title", "name": "purpose_title", "type": "text", "default_value": "OUR PURPOSE" },
+                 { "key": "field_purp_text", "label": "Purpose Text", "name": "purpose_text", "type": "textarea" },
+                 { "key": "field_miss_title", "label": "Mission Title", "name": "mission_title", "type": "text", "default_value": "OUR MISSION" },
+                 { "key": "field_miss_text", "label": "Mission Text", "name": "mission_text", "type": "textarea" }
+            ]
+        },
+        {
+            "key": "field_tab_testi_about",
+            "label": "Testimonials",
+            "type": "tab"
+        },
+        {
+             "key": "field_show_testi_about",
+            "label": "Show Testimonials",
+            "name": "show_testi",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+         {
+            "key": "field_testi_about_group",
+            "label": "Testimonials Content",
+            "name": "testimonials_content",
+            "type": "group",
+             "conditional_logic": [ [ { "field": "field_show_testi_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                 { "key": "field_testi_ab_title", "label": "Section Title", "name": "title", "type": "text", "default_value": "Testimonials" },
+                 {
+                    "key": "field_testi_ab_list",
+                    "label": "List",
+                    "name": "list",
+                    "type": "repeater",
+                    "sub_fields": [
+                        { "key": "field_testi_ab_quote", "label": "Quote", "name": "quote", "type": "textarea" },
+                        { "key": "field_testi_ab_name", "label": "Name", "name": "name", "type": "text" },
+                        { "key": "field_testi_ab_loc", "label": "Location", "name": "location", "type": "text" }
+                    ]
+                 }
+            ]
+        },
+        {
+            "key": "field_tab_links_about",
+            "label": "Bottom Links",
+            "type": "tab"
+        },
+        {
+            "key": "field_show_links_about",
+            "label": "Show Bottom Links",
+            "name": "show_links",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_links_about_rep",
+            "label": "Links",
+            "name": "bottom_links",
+            "type": "repeater",
+            "max": 2,
+             "conditional_logic": [ [ { "field": "field_show_links_about", "operator": "==", "value": "1" } ] ],
+            "sub_fields": [
+                 { "key": "field_bot_title", "label": "Title", "name": "title", "type": "text" },
+                 { "key": "field_bot_label", "label": "Button Label", "name": "label", "type": "text" },
+                 { "key": "field_bot_link", "label": "Link", "name": "link", "type": "url" }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/template_about.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true
+}

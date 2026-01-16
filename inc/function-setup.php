@@ -29,9 +29,32 @@ function vanphucbienhoa_scripts()
     wp_enqueue_script('vanphucbienhoa-chp-app', $theme_uri . '/chp/js/app-min.js', array('jquery', 'vanphucbienhoa-chp-owl'), _S_VERSION, true);
 
     // CHP "nw" bundle (Bootstrap + nw.js)
-    wp_enqueue_style('vanphucbienhoa-chp-nw-bootstrap', $theme_uri . '/chp/nw/css/bootstrap.min.css', array(), _S_VERSION);
-    wp_enqueue_style('vanphucbienhoa-chp-nw-main', $theme_uri . '/chp/nw/css/main.css', array('vanphucbienhoa-chp-nw-bootstrap'), _S_VERSION);
-    wp_enqueue_style('vanphucbienhoa-chp-nw-style', $theme_uri . '/chp/nw/css/style.css', array('vanphucbienhoa-chp-nw-main'), _S_VERSION);
+    // wp_enqueue_style('vanphucbienhoa-chp-nw-bootstrap', $theme_uri . '/chp/nw/css/bootstrap.min.css', array(), _S_VERSION);
+    // wp_enqueue_style('vanphucbienhoa-chp-nw-main', $theme_uri . '/chp/nw/css/main.css', array('vanphucbienhoa-chp-nw-bootstrap'), _S_VERSION);
+    // wp_enqueue_style('vanphucbienhoa-chp-nw-style', $theme_uri . '/chp/nw/css/style.css', array('vanphucbienhoa-chp-nw-main'), _S_VERSION);
+
+wp_enqueue_style(
+    'vanphucbienhoa-bootstrap',
+    $theme_uri . '/chp/nw/css/bootstrap.min.css',
+    [],
+    _S_VERSION
+);
+
+wp_enqueue_style(
+    'vanphucbienhoa-main',
+    $theme_uri . '/chp/nw/css/main.css',
+    ['vanphucbienhoa-bootstrap'],
+    _S_VERSION
+);
+
+wp_enqueue_style(
+    'vanphucbienhoa-style',
+    $theme_uri . '/chp/nw/css/style.css',
+    ['vanphucbienhoa-main'],
+    _S_VERSION
+);
+
+
 
     wp_enqueue_script('vanphucbienhoa-chp-nw-bootstrap', $theme_uri . '/chp/nw/js/bootstrap.bundle.min.js', array(), _S_VERSION, true);
     wp_enqueue_script('vanphucbienhoa-chp-nw', $theme_uri . '/chp/nw/js/nw.js', array('jquery', 'vanphucbienhoa-chp-nw-bootstrap'), _S_VERSION, true);
